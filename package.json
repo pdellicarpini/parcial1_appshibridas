@@ -1,0 +1,28 @@
+{
+  "name": "parcial1_delli-carpini-priscila",
+  "version": "1.0.0",
+  "description": "parcial 1 aplicaciones hibridas",
+  "homepage": "https://github.com/pdellicarpini/parcial1_appshibridas#readme",
+  "bugs": {
+    "url": "https://github.com/pdellicarpini/parcial1_appshibridas/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdellicarpini/parcial1_appshibridas.git"
+  },
+  "license": "ISC",
+  "author": "Priscila Delli Carpini",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.14"
+  },
+  "dependencies": {
+    "express": "5.2.1"
+  }
+}
