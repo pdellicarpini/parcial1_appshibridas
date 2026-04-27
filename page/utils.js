@@ -7,12 +7,3 @@ export function createPage(content) {
     return html
 }
 
-export function createCharactersList(characters){
-    let html = ""
-    html += "<ul>"
-    characters.forEach( character => html += "<li>"+ character.name + `<a href="/characters/${character.id}"> Ver más</a>` +"</li>" )
-    html += "</ul>"
-    return html
-}
-
-export default {createPage, createCharactersList}

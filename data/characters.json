@@ -1,62 +1,76 @@
 [
-    {
-        "id": 1,
-        "name": "Hello Kitty",
-        "description": "Una gatita icónica de Sanrio, conocida por su ternura y su amor por la amistad.",
-        "section": "clasicos",
-        "species": "gato",
-        "likes": "La tarta de manzana",
-        "img": "hello_kitty.webp",
-        "link": "https://en.wikipedia.org/wiki/Hello_Kitty"
-    },
-    {
-        "id": 2,
-        "name": "Kuromi",
-        "description": "Una chica traviesa con estilo punk, pero con un lado sensible.",
-        "section": "dark",
-        "species": "conejo",
-        "likes": "Escribir en su diario",
-        "img": "https://picsum.photos/400/225?2",
-        "link": "https://hellokitty.fandom.com/wiki/Kuromi"
-    },
-    {
-        "id": 3,
-        "name": "My Melody",
-        "description": "Una conejita dulce y amable que siempre cuida de sus amigos.",
-        "section": "cute",
-        "species": "conejo",
-        "likes": "Hornear galletas",
-        "img": "https://picsum.photos/400/225?3",
-        "link": "https://hellokitty.fandom.com/wiki/My_Melody"
-    },
-    {
-        "id": 4,
-        "name": "Cinnamoroll",
-        "description": "Un perrito blanco con orejas largas que puede volar.",
-        "section": "chill",
-        "species": "perro",
-        "likes": "Dormir y comer cosas dulces",
-        "img": "https://picsum.photos/400/225?4",
-        "link": "https://hellokitty.fandom.com/wiki/Cinnamoroll"
-    },
-    {
-        "id": 5,
-        "name": "Pompompurin",
-        "description": "Un golden retriever relajado que ama su boina.",
-        "section": "chill",
-        "species": "perro",
-        "likes": "Comer flan",
-        "img": "https://picsum.photos/400/225?5",
-        "link": "https://hellokitty.fandom.com/wiki/Pompompurin"
-    },
-    {
-        "id": 6,
-        "name": "Badtz-Maru",
-        "description": "Un pingüino rebelde con actitud sarcástica.",
-        "section": "adventure",
-        "species": "pinguino",
-        "likes": "Meterse en problemas",
-        "img": "https://picsum.photos/400/225?6",
-        "link": "https://hellokitty.fandom.com/wiki/Badtz-Maru"
-    }
+  {
+    "id": 1,
+    "name": "Hello Kitty",
+    "description": "Una gatita icónica de Sanrio, conocida por su ternura y su amor por la amistad.",
+    "section": "clasicos",
+    "species": "gato",
+    "likes": "La tarta de manzana",
+    "img": "hello_kitty.webp",
+    "link": "https://en.wikipedia.org/wiki/Hello_Kitty"
+  },
+  {
+    "id": 2,
+    "name": "Kuromi",
+    "description": "Una chica traviesa con estilo punk, pero con un lado sensible.",
+    "section": "dark",
+    "species": "conejo",
+    "likes": "Escribir en su diario",
+    "img": "https://picsum.photos/400/225?2",
+    "link": "https://hellokitty.fandom.com/wiki/Kuromi"
+  },
+  {
+    "id": 3,
+    "name": "My Melody",
+    "description": "Una conejita dulce y amable que siempre cuida de sus amigos.",
+    "section": "cute",
+    "species": "conejo",
+    "likes": "Hornear galletas",
+    "img": "https://picsum.photos/400/225?3",
+    "link": "https://hellokitty.fandom.com/wiki/My_Melody"
+  },
+  {
+    "id": 4,
+    "name": "Cinnamoroll",
+    "description": "Un perrito blanco con orejas largas que puede volar.",
+    "section": "chill",
+    "species": "perro",
+    "likes": "Dormir y comer cosas dulces",
+    "img": "https://picsum.photos/400/225?4",
+    "link": "https://hellokitty.fandom.com/wiki/Cinnamoroll"
+  },
+  {
+    "id": 5,
+    "name": "Pompompurin",
+    "description": "Un golden retriever relajado que ama su boina.",
+    "section": "chill",
+    "species": "perro",
+    "likes": "Comer flan",
+    "img": "https://picsum.photos/400/225?5",
+    "link": "https://hellokitty.fandom.com/wiki/Pompompurin"
+  },
+  {
+    "id": 6,
+    "name": "Badtz-Maru",
+    "description": "Un pingüino rebelde con actitud sarcástica.",
+    "section": "adventure",
+    "species": "pinguino",
+    "likes": "Meterse en problemas",
+    "img": "https://picsum.photos/400/225?6",
+    "link": "https://hellokitty.fandom.com/wiki/Badtz-Maru"
+  },
+  {
+    "name": "s",
+    "description": "s",
+    "species": "s",
+    "likes": "d",
+    "id": 7
+  },
+  {
+    "name": "MOCHA",
+    "description": "NO SÉ MUCHO",
+    "species": "PERRITO",
+    "likes": "EL COLOR ROSA",
+    "id": 8
+  }
 ]
