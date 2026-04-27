@@ -5,8 +5,8 @@
         "description": "Una gatita icónica de Sanrio, conocida por su ternura y su amor por la amistad.",
         "section": "clasicos",
         "species": "gato",
-        "likes": "Tarta de manzana",
-        "img": "https://picsum.photos/400/225?1",
+        "likes": "La tarta de manzana",
+        "img": "hello_kitty.webp",
         "link": "https://en.wikipedia.org/wiki/Hello_Kitty"
     },
     {
