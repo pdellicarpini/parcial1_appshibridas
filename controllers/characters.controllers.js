@@ -22,7 +22,7 @@ export function newCharacterForm (req, res) {
 export function newCharacterSave (req, res) {
     const character = req.body;
     console.log(character);
-    charactersService.saveNewCharacter(character)
+    charactersService.postCharacter(character)
     .then(characterSaved => res.send(charactersView.createCharacterPage(characterSaved)))
     .catch(err => {
         console.error(err)
