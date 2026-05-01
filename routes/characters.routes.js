@@ -1,11 +1,11 @@
 import express from "express";
-import * as charactersControler from "../controllers/characters.controllers.js";
+import * as charactersController from "../controllers/characters.controllers.js";
 
 const route = express.Router()
 
-route.get("/characters", charactersControler.getCharacters);
-route.get("/characters/add", charactersControler.newCharacterForm);
-route.post("/characters/add", charactersControler.newCharacterSave);
-route.get("/characters/:id", charactersControler.getCharacterById); 
+route.get("/characters", charactersController.getCharacters);
+route.get("/characters/add", charactersController.newCharacterForm);
+route.post("/characters/add", charactersController.newCharacterSave);
+route.get("/characters/:id", charactersController.getCharacterById); 
 
 export default route;

@@ -1,7 +1,10 @@
 import * as service from "../../services/characters.services.js";
 
 export function getCharacters(req, res){
-    return service.getCharacters()
+    const filter = {}
+    if (req.query.search) {filter.search = req.query.search}
+    if (req.query.section) {filter.section = req.query.section}
+    return service.getCharacters(filter)
         .then(characters => res.status(200).json(characters))
         .catch(err => res.status(500).json({msg: "No fue posible obtener los personajes, intente nuevamente más tarde."}))
 }

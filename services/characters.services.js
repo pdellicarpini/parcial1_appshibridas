@@ -4,10 +4,13 @@ import { MongoClient, ObjectId } from "mongodb";
 const client = new MongoClient("mongodb://prisciladellicarpini:admin1234@ac-3wxsqo1-shard-00-00.gpvdczn.mongodb.net:27017,ac-3wxsqo1-shard-00-01.gpvdczn.mongodb.net:27017,ac-3wxsqo1-shard-00-02.gpvdczn.mongodb.net:27017/?ssl=true&replicaSet=atlas-nil429-shard-0&authSource=admin&appName=Characters");
 const db = client.db("AH20232CP1");
 
-export async function getCharacters(){
+export async function getCharacters(filter = {}){
     try {
+        const filterBy = {}
+        if (filter.section) {filterBy.section = filter.section}
+        if (filter.search) {filterBy.$text = { $search: filter.search }}
         await client.connect()
-        return db.collection("characters").find({deleted: {$ne: true}}).toArray()
+        return db.collection("characters").find(filterBy).toArray()
     } catch (error) {
         console.error("ERROR:", error)
         throw error
@@ -27,7 +30,11 @@ export async function getCharacterById(id){
 export async function postCharacter(character){
     try {     
         await client.connect()
-        return db.collection("characters").insertOne(character)
+        const result = db.collection("characters").insertOne(character)
+        return {
+            ...character,
+            _id: result.insertedId
+        }
     } catch (error) {
         console.error("ERROR:", error)
         throw error

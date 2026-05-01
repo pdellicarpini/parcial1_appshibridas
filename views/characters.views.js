@@ -4,7 +4,7 @@ export function createCharactersList(characters){
     let html = ""
     html += "<a href='/characters/add' >Agregar personaje</a>"
     html += "<ul>"
-    characters.forEach( character => html += "<li>"+ character.name + `<a href="/characters/${character.id}"> Ver más</a>` +"</li>" )
+    characters.forEach( character => html += "<li>"+ character.name + `<a href="/characters/${character._id}"> Ver más</a>` +"</li>" )
     html += "</ul>"
     return createPage(html);
 }

@@ -11,4 +11,4 @@ app.use(express.json());
 app.use(charactersRoutes);
 app.use("/api", charactersApiRoutes);
 
-app.listen(2026, () => console.log("servidor funcionando en http://localhost:2026"));
+app.listen(3333, () => console.log("Servidor corriendo en el puerto 3333"));

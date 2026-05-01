@@ -2,7 +2,11 @@ import * as charactersService from "../services/characters.services.js";
 import * as charactersView from "../views/characters.views.js";
 
 export function getCharacters (req, res) {
-    charactersService.getCharacters()
+    const filter = {}
+    if(req.query.section){filter.section = req.query.section}
+    if(req.query.search) {filter.search = req.query.search}
+
+    charactersService.getCharacters(filter)
     .then(characters => res.send(charactersView.createCharactersList(characters)))
     .catch(err => res.send("no se pudo leer el archivo"))
 }
@@ -11,7 +15,7 @@ export function getCharacterById (req, res) {
     const id = req.params.id
     charactersService.getCharacterById(id)
     .then(character => res.send(charactersView.createCharacterPage(character)))
-    .catch(err => res.send(createPage(charactersView.create404())))
+    .catch(err => res.send(charactersView.create404()))
 } 
 
 
