@@ -55,7 +55,7 @@ export async function updateCharacter(req, res){
         return res.status(404).json({ msg: "El personaje solicitado no existe." })
     }
     const character = {
-        id: id,
+        _id: id,
         name: req.body?.name ? req.body?.name : uneditedCharacter.name,
         description: req.body?.description ? req.body?.description : uneditedCharacter.description,
         section: req.body?.section ? req.body?.section : uneditedCharacter.section,
@@ -79,7 +79,7 @@ export async function updateCharacter(req, res){
 export function replaceCharacter(req, res){
     const id = req.params.id
     const character = {
-        id: id,
+        _id: id,
         name: req.body?.name,
         description: req.body?.description,
         section: req.body?.section,

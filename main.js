@@ -1,7 +1,8 @@
 import express from "express";
 import charactersRoutes from "./routes/characters.routes.js";
 import charactersApiRoutes from "./api/routes/characters.routes.js";
-const app = express(); 
+
+const app = express();
 
 app.use("/", express.static("public"));
 app.use(express.urlencoded({ extended: true }));
