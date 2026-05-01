@@ -1,0 +1,22 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav a {
+    color: black !important;
+}
+
+body {
+    background-color: #ffeeef;
+}
+
+.character {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

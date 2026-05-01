@@ -2,20 +2,26 @@ import { createPage } from "../page/utils.js";
 
 export function createCharactersList(characters){
     let html = ""
+    html += "<div class='character'>"
     html += "<a href='/characters/add' >Agregar personaje</a>"
     html += "<ul>"
     characters.forEach( character => html += "<li>"+ character.name + `<a href="/characters/${character._id}"> Ver más</a>` +"</li>" )
     html += "</ul>"
+    html += "</div>"
     return createPage(html);
 }
 
 export function createCharacterPage(character){
     let html = ""
+    html += "<div class='character'>"
+    html += "<div class='character_card'>"
     html += "<h2>" + character.name + "</h2>"
     html += "<p>" + character.description + "</p>"
     html += "<p>Le gusta mucho: " + character.likes + "</p>"
     html += "<p>Especie: " + character.name + " es un " + character.species + "</p>"
     html += `<img src="..public/${character.img}" alt="${character.name}" width="300px">`
+    html += "</div>"
+    html += "</div>"
     return createPage(html);
 }
 
