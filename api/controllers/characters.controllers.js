@@ -67,7 +67,7 @@ export async function updateCharacter(req, res){
         img: req.body?.img ? req.body?.img : uneditedCharacter.img,
         link: req.body?.link ? req.body?.link : uneditedCharacter.link
     }
-    service.editCharacter(character)
+    service.updateCharacter(character)
         .then(character => {
             if(Object.keys(character).length !== 0){
                 res.status(202).json(character)
@@ -91,7 +91,7 @@ export function replaceCharacter(req, res){
         img: req.body?.img,
         link: req.body?.link
     }
-    service.editCharacter(character)
+    service.updateCharacter(character)
         .then(character => {
             if(Object.keys(character).length !== 0){
                 res.status(202).json(character)

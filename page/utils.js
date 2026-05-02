@@ -10,6 +10,9 @@ export function createPage(content) {
             <a class="nav-link" href="/characters?section=cute">Cutes</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="/characters?section=dark">Dark</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="/characters?section=chill">Chill</a>
         </li>
         <li class="nav-item">
@@ -20,7 +23,7 @@ export function createPage(content) {
         </li>
             <form action="/characters" method="get" class="d-flex" role="search">
                 <input class="form-control me-2" name="search" type="search" placeholder="Buscar" aria-label="Search"/>
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                <button class="btn" type="submit">Buscar</button>
             </form>
         </ul>
     </nav></header>`

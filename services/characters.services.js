@@ -7,6 +7,7 @@ const db = client.db("AH20232CP1");
 export async function getCharacters(filter = {}){
     try {
         const filterBy = {}
+        filterBy.deleted = { $ne: true }
         if (filter.section) {filterBy.section = filter.section}
         if (filter.search) {filterBy.$text = { $search: filter.search }}
         await client.connect()
@@ -52,12 +53,15 @@ export async function deleteCharacter(id) {
     }
 }
 
-export async function editCharacter(character) {
+export async function updateCharacter(character) {
         try {
         await client.connect()
+
         const {_id, ...data} = character
-        await db.collection("characters").updateOne({_id: new ObjectId(character._id)}, {$set: data})
-        return character._id
+        const id = new ObjectId(_id)
+
+        await db.collection("characters").updateOne({_id: id}, {$set: data})
+        return await db.collection("characters").findOne({ _id: id })
     } catch (error) {
         console.error("ERROR:", error)
         throw error
