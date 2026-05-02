@@ -6,11 +6,21 @@ const db = client.db("AH20232CP1");
 
 export async function getCharacters(filter = {}){
     try {
+        await client.connect()
+        
         const filterBy = {}
         filterBy.deleted = { $ne: true }
-        if (filter.section) {filterBy.section = filter.section}
-        if (filter.search) {filterBy.$text = { $search: filter.search }}
-        await client.connect()
+
+        if (filter.section && filter.search) {
+            filterBy.section = filter.section
+            filterBy.$text = { $search: filter.search }
+        } else if (filter.search) {
+            filterBy.$text = { $search: filter.search }
+
+        } else if (filter.section) {
+            filterBy.section = filter.section
+        }   
+        
         return db.collection("characters").find(filterBy).toArray()
     } catch (error) {
         console.error("ERROR:", error)
